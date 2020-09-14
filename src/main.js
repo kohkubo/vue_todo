@@ -1,7 +1,5 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbvue/build/css/mdb.css';
 import Vue from 'vue';
 import App from './App';
 
@@ -13,3 +11,14 @@ new Vue({
   components: { App },
   template: '<App/>'
 });
+
+// Sevice Worker registration:
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').then(reg => {
+      console.log(reg);
+    });
+  });
+} else {
+  console.log('Service Worker not supported :(');
+}
