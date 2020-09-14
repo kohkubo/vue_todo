@@ -6,15 +6,13 @@
         <mdb-badge @click.native="onDelete" tag="a" color="danger-color" class="ml-2 float-right">-</mdb-badge>
         <h6 v-if="title" class="mt-0 font-weight-bold">{{ title }}</h6>
         <hr class="hr-bold my-2" />
-
         <p v-if="location" class="font-smaller mb-0">
-          <mdb-icon icon="location-arrow" /> {{ location }}
+          <mdb-icon icon="location-arrow" />
+          {{ location }}
         </p>
       </div>
     </div>
-    <p v-if="description" class="p-2 mb-4 blue-grey lighten-5">
-      {{ description }}
-    </p>
+    <p v-if="description" class="p-2 mb-4 blue-grey lighten-5">{{ description }}</p>
   </div>
 </template>
 
@@ -25,31 +23,32 @@ export default {
   name: "Event",
   components: {
     mdbBadge,
-    mdbIcon
+    mdbIcon,
   },
   props: {
     index: {
-      type: Number
+      type: Number,
     },
     time: {
-      type: String
+      type: String,
     },
     title: {
-      type: String
+      type: String,
     },
     location: {
-      type: String
+      type: String,
     },
     description: {
-      type: String
-    }
+      type: String,
+    },
   },
   methods: {
     onDelete() {
-      this.$emit('delete', this.index);
-    }
-  }
+      this.$emit("delete", this.index);
+    },
+  },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

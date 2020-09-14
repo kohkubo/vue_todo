@@ -5,6 +5,7 @@
   "author": "MDBootstrap <support@mdbootstrap.com>",
   "license": "MIT",
   "scripts": {
+    "deploy": "yarn build && firebase deploy",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --open",
     "start": "yarn-or-npm run dev",
     "mdb": "webpack-dev-server --inline --progress --config demo_build/webpack.dev.conf.js --open",
