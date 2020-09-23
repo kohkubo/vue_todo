@@ -23,26 +23,26 @@
       <mdb-col md="3" col="12">
         <h3 class="text-uppercase my-3">Schedule</h3>
         <h6 class="my-3">
-          It's going to be busy that today. You have
-          <b>{{ events.length }} events</b> today.
+          未完の予定が
+          <b>{{ events.length }} 件</b> あります。
         </h6>
         <h1 class="my-3">
           <mdb-row>
             <mdb-col col="3" class="text-center">
               <mdb-icon far icon="sun" />
             </mdb-col>
-            <mdb-col col="9">Sunny</mdb-col>
+            <mdb-col col="9">晴れ</mdb-col>
           </mdb-row>
           <mdb-row>
             <mdb-col col="3" class="text-center">
               <mdb-icon icon="thermometer-three-quarters" />
             </mdb-col>
-            <mdb-col col="9">23°C</mdb-col>
+            <mdb-col col="9">30°C</mdb-col>
           </mdb-row>
         </h1>
         <p>
-          Don't forget your sunglasses. Today will dry and sunny, becoming warm
-          in the afternoon with temperatures of between 20 and 25 degrees.
+          昨日の東京都のコロナ陽性者数は146人<br>
+          サングラスもお忘れなく。今日は乾燥して晴れ、午後は気温が20度から25度の間暖かくなります。
         </p>
       </mdb-col>
     </mdb-row>
@@ -132,25 +132,10 @@ export default {
       events: [
         {
           time: "10:00",
-          title: "Breakfast with Simon",
-          location: "Lounge Caffe",
-          description: "Discuss Q3 targets",
-        },
-        {
-          time: "10:30",
-          title: "Daily Standup Meeting (recurring)",
-          location: "Warsaw Spire Office",
-        },
-        {
-          time: "11:00",
-          title: "Call with HRs",
-        },
-        {
-          time: "12:00",
-          title: "Lunch with Timmoty",
-          location: "Canteen",
-          description: "Project evalutation ",
-        },
+          title: "サンプル",
+          location: "お台場",
+          description: "text text text text text text text text text text text text text",
+        }
       ],
       modal: false,
       newValues: [],
